@@ -1,12 +1,13 @@
 /* Style général */
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url("nuage d’images.webp") no-repeat center center fixed;
-    background-size: cover; /* Affiche un fond d'écran sans bleu foncé */
-    color: #333;
-    line-height: 1.6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("imagecloud.webp") no-repeat center center fixed;
+            background-size: cover; /* Affiche un fond d'écran sans bleu foncé */
+            color: #333;
+            line-height: 1.6;
 }
 
 /* Header */
