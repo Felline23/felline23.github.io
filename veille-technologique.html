@@ -1,1 +1,65 @@
-Veille-technologique
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h2 {
+            margin: 20px ;
+            color: yellow;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #000B50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Veille Technologique</h1>
+    </header>
+
+    <!--<h1>Mes Projets E4</h1>-->
+    <div class="circle-container">
+        <div class="circle" onclick="openPDF('Veille-Technologique.pdf')"><!--Projet 1--><br><!--Epreuve de veille technologique--></div>
+    </div>
+
+    <!-- Nouveau bouton -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="openPDF('Veille-Technologique.pdf')">Ouvrir le PDF</button>
+    </div>
+
+    <script>
+        function openPDF(fileName) {
+            window.open(fileName, '_blank');
+        }
+    </script>
+
+    <!-- Contenu principal -->
+    <main>
+        <section>
+            <h1>Thème :L'IA</h1>
+            <p>
+                L’intelligence artificielle (IA) permet aux machines de simuler des fonctions humaines, révolutionnant les secteurs grâce à l’automatisation et l’innovation.comme l’apprentissage et la prise de décision. Elle transforme de nombreux secteurs en automatisant des tâches complexes et en offrant des solutions innovantes aux défis modernes. Cette veille explore quelques brèches de ce sujet 
+            </p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Portfolio BTS SIO - Tous droits réservés.</p>
+        <a href="index.html"><h2>Retour à l'accueil</h2></a>
+    </footer>
+</body>
+</html>
