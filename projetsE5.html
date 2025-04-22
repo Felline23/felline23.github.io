@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramme en Cercle - Projets E4</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: white;
+        }
+
+        h2 {
+            margin: 20px ;
+            color: yellow;
+            font-size: 14px;;
+        }
+
+    .circle-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      margin: 50px auto;
+    }
+
+    .circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #191970;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFFF00;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .circle:hover {
+      transform: scale(1.1);
+    }
+
+    /* Position des 8 cercles */
+    .circle:nth-child(1)  { top: 0%;   left: 50%; transform: translate(-50%, 0); }
+    .circle:nth-child(2)  { top: 15%;  left: 85%; transform: translate(-50%, 0); }
+    .circle:nth-child(3)  { top: 50%;  left: 100%; transform: translate(-100%, -50%); }
+    .circle:nth-child(4)  { top: 85%;  left: 85%; transform: translate(-50%, -100%); }
+    .circle:nth-child(5)  { top: 100%; left: 50%; transform: translate(-50%, -100%); }
+    .circle:nth-child(6)  { top: 85%;  left: 15%; transform: translate(-50%, -100%); }
+    .circle:nth-child(7)  { top: 50%;  left: 0%; transform: translate(0, -50%); }
+    .circle:nth-child(8)  { top: 15%;  left: 15%; transform: translate(-50%, 0); }
+
+    .arrow {
+      position: absolute;
+      width: 2px;
+      height: 150px;
+      background-color: yellow;
+      transform-origin: center top;
+    }
+
+    /* Position et rotation des flèches (à ajuster selon design final) */
+    .arrow:nth-child(9)  { top: 10%;  left: 68%; transform: rotate(45deg); }
+    .arrow:nth-child(10) { top: 32%;  left: 90%; transform: rotate(90deg); }
+    .arrow:nth-child(11) { top: 68%;  left: 90%; transform: rotate(135deg); }
+    .arrow:nth-child(12) { top: 90%;  left: 68%; transform: rotate(180deg); }
+    .arrow:nth-child(13) { top: 90%;  left: 32%; transform: rotate(225deg); }
+    .arrow:nth-child(14) { top: 68%;  left: 10%; transform: rotate(270deg); }
+    .arrow:nth-child(15) { top: 32%;  left: 10%; transform: rotate(315deg); }
+    .arrow:nth-child(16) { top: 10%;  left: 32%; transform: rotate(0deg); }
+  </style>
+</head>
+<body>
+  <h1>Mes Projets E5</h1>
+
+  <div class="circle-container">
+    <div class="circle" onclick="openPDF('projet1.pdf')">Situation 1<br>SSH</div>
+    <div class="circle" onclick="openPDF('projet2.pdf')">Situation 2</div>
+    <div class="circle" onclick="openPDF('projet3.pdf')">Situation 3</div>
+    <div class="circle" onclick="openPDF('projet4.pdf')">Situation 4</div>
+    <div class="circle" onclick="openPDF('projet5.pdf')">Situation 5</div>
+    <div class="circle" onclick="openPDF('projet6.pdf')">Situation 6</div>
+    <div class="circle" onclick="openPDF('projet7.pdf')">Situation 7</div>
+    <div class="circle" onclick="openPDF('projet8.pdf')">Situation 8</div>
+
+    <!-- 8 flèches -->
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+  </div>
+
+  <script>
+    function openPDF(fileName) {
+      window.open(fileName, '_blank');
+    }
+  </script>
+
+  <footer>
+    <a href="index.html"><h2>Retour à l'accueil</h2></a>
+  </footer>
+</body>
+</html>
