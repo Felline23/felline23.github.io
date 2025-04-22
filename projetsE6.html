@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramme en Cercle - Projets E6</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: white;
+            
+        }
+
+        h2 {
+            margin: 20px ;
+            color: yellow;
+            font-size: 14px;;
+        }
+
+        .circle-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+        }
+
+        .circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #191970;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFF00;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+        }
+
+        .circle:nth-child(1) { top: 50%; left: 2%; transform: translate(-50%, -50%); }
+        .circle:nth-child(2) { top: 50%; left: 98%; transform: translate(-50%, -50%); }
+        
+
+        .arrow {
+            position: absolute;
+            width: 2px;
+            height: 200px;
+            background-color: yellow;
+            transform-origin: center top;
+        }
+
+        /* Position and rotate the arrows between the circles */
+        /*.arrow:nth-child(7) { top: 20%; left: 70%; transform: rotate(60deg); height: 100px; }
+        .arrow:nth-child(8) { top: 50%; left: 90%; transform: rotate(120deg); height: 100px; }
+        */
+    
+    </style>
+</head>
+<body>
+    <h1>Mes Projets E6</h1>
+    <div class="circle-container">
+        <div class="circle" onclick="openPDF('GLPI.pdf')">Situation 1<br></div>
+        <div class="circle" onclick="openPDF('projet2.pdf')">Situation 2 <br></div>
+        
+
+        <!-- Arrows connecting circles in sequence -->
+        <!--<div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>-->
+    </div>
+
+    <script>
+        function openPDF(fileName) {
+            window.open(fileName, '_blank');
+        }
+    </script>
+    <!-- Pied de page -->
+    <footer>
+        <a href="index.html"><h2>Retour à l'accueil</h2></a>
+    </footer>
+</body>
+</html>
